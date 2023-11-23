@@ -6,22 +6,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Sneaker Store</title>
-    <link href="{{asset('public/frontend/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/prettyPhoto.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/price-range.css')}}" rel="stylesheet">
-    <link href="{{asset('public/frontend/css/animate.css')}}" rel="stylesheet">
-	<link href="{{asset('public/frontend/css/main.css')}}" rel="stylesheet">
-	<link href="{{asset('public/frontend/css/responsive.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/price-range.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/animate.css')}}" rel="stylesheet">
+	<link href="{{asset('frontend/css/main.css')}}" rel="stylesheet">
+	<link href="{{asset('frontend/css/responsive.css')}}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="{{('public/frontend/images/favicon.ico')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{('public/frontend/images/apple-touch-icon-144-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{('public/frontend/images/apple-touch-icon-114-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{('public/frontend/images/apple-touch-icon-72-precomposed.png')}}">
-    <link rel="apple-touch-icon-precomposed" href="{{('public/frontend/images/apple-touch-icon-57-precomposed.png')}}">
+    <link rel="shortcut icon" href="{{asset('frontend/images/favicon.ico')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('frontend/images/apple-touch-icon-144-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('frontend/images/apple-touch-icon-114-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('frontend/images/apple-touch-icon-72-precomposed.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('frontend/images/apple-touch-icon-57-precomposed.png')}}">
 </head><!--/head-->
 
 <body>
@@ -57,7 +57,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="{{URL::to('/trang-chu')}}"><img src="{{{'public/frontend/images/logo.png'}}}" alt="" /></a>
+							<a href="{{route('trang-chu')}}"><img src="{{asset('frontend/images/logo.png')}}" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
@@ -112,7 +112,7 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="{{URL::to('/trang-chu')}}" class="active">Home</a></li>
+								<li><a href="{{route('trang-chu')}}" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
@@ -163,8 +163,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{('public/frontend/images/girl1.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('public/frontend/images/pricing.png')}}"  class="pricing')}}" alt="" />
+									<img src="{{asset('frontend/images/girl1.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('frontend/images/pricing.png')}}"  class="pricing')}}" alt="" />
 								</div>
 							</div>
 							<div class="item">
@@ -175,8 +175,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{('public/frontend/images/girl2.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('public/frontend/images/pricing.png')}}"  class="pricing" alt="" />
+									<img src="{{asset('frontend/images/girl2.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('frontend/images/pricing.png')}}"  class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -188,8 +188,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{('public/frontend/images/girl3.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{('public/frontend/images/pricing.png')}}" class="pricing" alt="" />
+									<img src="{{asset('frontend/images/girl3.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('frontend/images/pricing.png')}}" class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -345,7 +345,7 @@
 						</div><!--/price-range-->
 						
 						<div class="shipping text-center"><!--shipping-->
-							<img src="{{('public/frontend/images/shipping.jpg')}}" alt="" />
+							<img src="{{asset('frontend/images/shipping.jpg')}}" alt="" />
 						</div><!--/shipping-->
 					
 					</div>
@@ -373,7 +373,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('public/frontend/images/iframe1.png')}}" alt="" />
+										<img src="{{asset('frontend/images/iframe1.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -388,7 +388,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('public/frontend/images/iframe2.png')}}" alt="" />
+										<img src="{{asset('frontend/images/iframe2.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -403,7 +403,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('public/frontend/images/iframe3.png')}}" alt="" />
+										<img src="{{asset('frontend/images/iframe3.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -418,7 +418,7 @@
 							<div class="video-gallery text-center">
 								<a href="#">
 									<div class="iframe-img">
-										<img src="{{('public/frontend/images/iframe4.png')}}" alt="" />
+										<img src="{{asset('frontend/images/iframe4.png')}}" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
@@ -431,7 +431,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-							<img src="{{('public/frontend/images/map.png')}}" alt="" />
+							<img src="{{asset('frontend/images/map.png')}}" alt="" />
 							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
 						</div>
 					</div>
@@ -518,11 +518,11 @@
 	
 
   
-    <script src="{{asset('public/frontend/js/jquery.js')}}"></script>
-	<script src="{{asset('public/frontend/js/bootstrap.min.js')}}"></script>
-	<script src="{{asset('public/frontend/js/jquery.scrollUp.min.js')}}"></script>
-	<script src="{{asset('public/frontend/js/price-range.js')}}"></script>
-    <script src="{{asset('public/frontend/js/jquery.prettyPhoto.js')}}"></script>
-    <script src="{{asset('public/frontend/js/main.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.js')}}"></script>
+	<script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('frontend/js/jquery.scrollUp.min.js')}}"></script>
+	<script src="{{asset('frontend/js/price-range.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.prettyPhoto.js')}}"></script>
+    <script src="{{asset('frontend/js/main.js')}}"></script>
 </body>
 </html>
