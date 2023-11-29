@@ -21,3 +21,16 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->na
 Route::get('/dashboard', 'App\Http\Controllers\AdminController@showDashBoard');
 Route::post('/admin-dashboard','App\Http\Controllers\AdminController@dashboard');
 Route::post('/logout','App\Http\Controllers\AdminController@logout');
+
+
+//category-Product
+Route::get('/add-category-product', 'App\Http\Controllers\categoryProduct@add_category_product');
+Route::get('/edit-category-product/{category_product_id}', 'App\Http\Controllers\categoryProduct@edit_category_product');
+Route::get('/delete-category-product/{category_product_id}', 'App\Http\Controllers\categoryProduct@delete_category_product');
+Route::get('/all-category-product', 'App\Http\Controllers\categoryProduct@all_category_product');
+
+Route::get('/active-category-product/{category_product_id}', 'App\Http\Controllers\categoryProduct@active_category_product');
+Route::get('/unactive-category-product/{category_product_id}', 'App\Http\Controllers\categoryProduct@unactive_category_product');
+
+Route::post('/save-category-product', 'App\Http\Controllers\categoryProduct@save_category_product');
+Route::post('/update-category-product/{category_product_id}', 'App\Http\Controllers\categoryProduct@update_category_product');
