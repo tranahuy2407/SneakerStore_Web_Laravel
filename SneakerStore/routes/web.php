@@ -15,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 //frontend
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/trang-chu', [App\Http\Controllers\HomeController::class, 'index'])->name('trang-chu');
+//Danh muc san pham trang chu
+Route::get('/danh-muc-san-pham/{category_id}','App\Http\Controllers\categoryProduct@show_category_home');
+//Thuong hieu san pham trang chu
+Route::get('/thuong-hieu-san-pham/{brand_id}','App\Http\Controllers\BrandProduct@show_brand_home');
+//Chitietsanpham
+Route::get('/chi-tiet-san-pham/{product_id}','App\Http\Controllers\ProductController@details_product');
+
 
 //backend
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
