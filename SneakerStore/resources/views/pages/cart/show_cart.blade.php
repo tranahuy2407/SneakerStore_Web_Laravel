@@ -133,7 +133,20 @@
                         <li>Phí vận chuyển <span>Miễn phí</span></li>
                         <li>Thành tiền <span>{{Cart::total()}}</span></li>
                     </ul>
-                        <a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Thanh toán</a>
+                    <?php
+								$customer_id =Session::get('customer_id');
+								if($customer_id!=NULL){
+
+								?>
+									<a class="btn btn-default check_out" href="{{URL::to('/checkout')}}">Thanh toán</a>
+								<?php
+								}else{
+								?>
+									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i>Thanh toán</a></li>
+								<?php
+								}
+								?>
+                        
                 </div>
             </div>
         </div>
