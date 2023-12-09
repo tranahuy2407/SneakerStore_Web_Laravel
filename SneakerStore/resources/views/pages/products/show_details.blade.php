@@ -35,28 +35,21 @@
             <h2>{{$value->product_name}}</h2>
             <p>Mã: {{$value->product_id}}</p>
             <img src="images/product-details/rating.png" alt="" />
-            <span>
+            <form action="{{URL::to('/save-cart')}}" method="post">
+                {{ csrf_field() }}
+                <span>
                 <span>{{number_format($value->product_price)}}. VNĐ</span>
                 <label>Số lượng:</label>
-                <input type="number" min='1' value="1" />
-                <a href="#">
-                    <button class="truck-button">
-                    <span class="default"style="position:relative;left:23px;">Thêm vào giỏ hàng</span>
-                    <span class="success">
-                        Đã thêm vào giỏ hàng
-                        <svg viewbox="0 0 12 10">
-                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                        </svg>
-                    </span>
-                    <div class="truck">
-                        <div class="wheel"></div>
-                        <div class="back"></div>
-                        <div class="front"></div>
-                        <div class="box"></div>
-                    </div>
-                </button>
-            </a>
-            </span>
+                <input name ="qty" type="number" min='1' value="1" />
+                <label>Size:</label>
+                <input name ="size" type="number" min='34' max='46' value="38" />
+                <input name ="productid_hidden" type="hidden" value="{{$value->product_id}}" />
+                 <button type="submit" class="btn btn-default cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    Thêm vào giỏ hàng
+                    </button>  
+                </span>
+        </form>
             <p><b>Tình trạng :</b>Còn hàng</p>
             <p><b>Điều kiện: </b> Mới 100%</p>
             <p><b>Thương hiệu: </b>{{$value->brand_name}}</p>
@@ -75,7 +68,7 @@
         </ul>
     </div>
     <div class="tab-content">
-        <div class="tab-pane fade" id="details" >
+        <div class="tab-pane fade active in" id="details" >
       
             <p>{!!$value->product_desc!!}</p>
         </div>
@@ -85,7 +78,7 @@
             <p>{!!$value->product_content!!}</p>
            
         </div>
-        <div class="tab-pane fade active in" id="reviews" >
+        <div class="tab-pane fade " id="reviews" >
             <div class="col-sm-12">
                 <ul>
                     <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
@@ -120,33 +113,37 @@
             <div class="item active">
                 @foreach ($relate as $key=> $value)             
                 <div class="col-sm-4">
+                    <a href="{{URL::to('/chi-tiet-san-pham/'.$value->product_id)}}">
                     <div class="product-image-wrapper">
                         <div class="productinfo text-center">
-                        <img src="{{URL::to('uploads/products/'.$value->product_image)}}" alt="" />
+                        <img src="{{URL::to('uploads/products/'.$value->product_image)}}" alt=""  />
                         <h2>{{number_format($value->product_price).' VNĐ'}}</h2>
                         <p>{{$value->product_name}}</p>
-                        <a href="#">
-                            <button class="truck-button">
-                            <span class="default">Thêm vào giỏ hàng </span>
-                            <span class="success">
-                                Đã thêm vào giỏ hàng
-                                <svg viewbox="0 0 12 10">
-                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                </svg>
-                            </span>
-                            <div class="truck">
-                                <div class="wheel"></div>
-                                <div class="back"></div>
-                                <div class="front"></div>
-                                <div class="box"></div>
-                            </div>
-                        </button>
-                    </a>
+                        <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem chi tiết sản phẩm</button>
                     </div>
                 </div>
+            </a>
                 </div>
                 @endforeach	
             </div>
+            <div class="item">
+              
+                @foreach ($relate1 as $key=> $value)             
+                <div class="col-sm-4">
+                    <a href="{{URL::to('/chi-tiet-san-pham/'.$value->product_id)}}">
+                    <div class="product-image-wrapper">
+                        <div class="productinfo text-center">
+                        <img src="{{URL::to('uploads/products/'.$value->product_image)}}" alt=""  />
+                        <h2>{{number_format($value->product_price).' VNĐ'}}</h2>
+                        <p>{{$value->product_name}}</p>
+                        <button type="submit" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem chi tiết sản phẩm</button>
+                    </div>
+                </div>
+                 </a>
+                </div>
+                @endforeach	
+            </div>
+      
         </div>
          <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
             <i class="fa fa-angle-left"></i>

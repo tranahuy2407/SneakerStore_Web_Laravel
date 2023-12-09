@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+
 <div class="features_items"><!--features_items-->
                     @foreach ($category_name as $key => $name)
 						<h2 class="title text-center">{{$name->category_name}}</h2>

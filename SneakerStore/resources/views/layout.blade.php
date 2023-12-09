@@ -86,11 +86,11 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="#"><i class="fa fa-user"></i> Tài khoản</a></li>
+								<li><a href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
+								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Kiểm tra</a></li>
+								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Đăng nhập</a></li>
 							</ul>
 						</div>
 					</div>
@@ -112,7 +112,7 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="{{route('trang-chu')}}" class="active">Home</a></li>
+								<li><a href="{{route('trang-chu')}}" class="active">Trang chủ</a></li>
 								<li class="dropdown"><a href="#">Sản phẩm<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
@@ -150,36 +150,36 @@
 							<div class="item active">
 								<div class="col-sm-6">
 									<h1><span>Sneaker</span>-STORE</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h2>Expect quality not quantity</h2>
+									<p>Hãy mang ánh sáng trên đôi chân của bạn, hãy mạnh mẽ trong cuộc sống. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{asset('frontend/images/girl1.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('uploads/products/banner2.jpg')}}" class="girl img-responsive" alt="" />
 				
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
 									<h1><span>Sneaker</span>-STORE</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h2>A Shoe Is Forever</h2>
+									<p>Theo đuổi ước mơ của bạn… tất nhiên là trên giày cao gót. </p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{asset('frontend/images/girl2.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('uploads/products/banner3.jpg')}}" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							
 							<div class="item">
 								<div class="col-sm-6">
 									<h1><span>Sneaker</span>-STORE</h1>
-									<h2>Free Ecommerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h2>Amazing sneakers just for you</h2>
+									<p>Nếu ai đó nhìn vào những đôi giày tôi thiết kế và nói rằng trông chúng thật thoải mái thì tôi sẽ ghét người đó lắm. (Christian Louboutin)</p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{asset('frontend/images/girl3.jpg')}}" class="girl img-responsive" alt="" />
+									<img src="{{asset('uploads/products/banner1.jpg')}}" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							
@@ -197,7 +197,6 @@
 			</div>
 		</div>
 	</section><!--/slider-->
-	
 	<section>
 		<div class="container">
 			<div class="row">
@@ -241,7 +240,7 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
+							<h2><span>Sneaker</span>Store</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
 						</div>
 					</div>
