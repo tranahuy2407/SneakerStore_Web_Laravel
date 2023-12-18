@@ -7,8 +7,6 @@
           <li class="active">Thanh toán</li>
         </ol>
     </div>
-
-       
         <div class="register-req">
             <p>Đăng ký hoặc đăng nhập để thanh toán và xem lại lịch sử mua hàng</p>
         </div><!--/register-req-->
@@ -19,7 +17,7 @@
                     <div class="bill-to">
                         <p>Điền thông tin thanh toán</p>
                         <div class="form-one">
-                            <form action="{{URL::to('/save-checkout-customer')}}">
+                            <form action="{{URL::to('/save-checkout-customer')}}" method="post">
                                 {{ csrf_field()}}
                                 <input type="text" name="shipping_name" placeholder="Họ Tên *">
                                 <input type="text" name="shipping_email" placeholder="Email *">

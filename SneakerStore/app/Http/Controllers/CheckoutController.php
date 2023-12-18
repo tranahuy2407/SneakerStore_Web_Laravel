@@ -50,10 +50,22 @@ class CheckoutController extends Controller
         $data['shipping_address']=$request->shipping_address;
 
         $shipping_id = DB::table('tbl_shipping')->insertGetId($data);
-        Sesion::put('shipping_id',$shipping_id);
+        Session::put('shipping_id',$shipping_id);
         return Redirect::to('/payment');
     }
     public function payment(){
+        $cate_product=DB::table('tbl_category_product')->where('category_status','0')->orderby('category_id','desc')->get();
+        $brand_product=DB::table('tbl_brand')->where('brand_status','0')->orderby('brand_id','desc')->get();
+        return view('pages.checkout.payment')->with('category',$cate_product)->with('brand',$brand_product);
+    }
+    public function order_place(Request $request){
+        $data=array();
+        $data['payment_method']=$request->payment_option;
+        $data['payment_status']='Đang chờ xử lý';
+
+        $shipping_id = DB::table('tbl_shipping')->insertGetId($data);
+        Session::put('shipping_id',$shipping_id);
+        return Redirect::to('/payment');
 
     }
     public function logout_checkout(){
@@ -64,15 +76,12 @@ class CheckoutController extends Controller
        $email = $request->email_account;
        $password = md5($request->password_account);
        $result = DB::table('tbl_customers')->where('customer_email',$email)->where('customer_password',$password)->first();
-      
        if($result){
         Session::put('customer_id',$result->customer_id);
         return Redirect::to('/checkout');
-       }
+       } 
        else{
         return Redirect::to('/login-checkout');
        }
-
-       
     }
 }

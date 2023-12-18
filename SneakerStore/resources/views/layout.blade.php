@@ -89,13 +89,18 @@
 								<li><a href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
 								<?php
 								$customer_id =Session::get('customer_id');
-								if($customer_id!=NULL){
+								$shipping_id =Session::get('shipping_id');
+								if($customer_id!=NULL && $shipping_id==NULL){
 								?>
 									<li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i>Thanh toán</a></li>
 								<?php
+								}elseif($customer_id!=NULL && $shipping_id!=NULL){
+								?>
+									<li><a href="{{URL::to('/payment')}}"><i class="fa fa-crosshairs"></i>Thanh toán</a></li>
+								<?php
 								}else{
 								?>
-									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i>Thanh toán</a></li>
+									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i>Thanh toán</a></li>
 								<?php
 								}
 								?>
@@ -121,7 +126,7 @@
 		<div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-9">
+					<div class="col-sm-7">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle navigation</span>
@@ -140,15 +145,19 @@
                                 </li> 
 								<li class="dropdown"><a href="#">Tin tức<i class="fa fa-angle-down"></i></a>
                                 </li> 
-								<li><a href="404.html">Giỏ hàng</a></li>
+								<li><a href="{{URL::to('/show_cart')}}">Giỏ hàng</a></li>
 								<li><a href="contact-us.html">Liên hệ</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3">
+					<div class="col-sm-5">
+						<form action="{{URL::to('/tim-kiem')}}" method="post">
+							{{csrf_field()}}
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input type="text" name="keywords_submit" placeholder="Tìm kiếm sản phẩm"/>
+							<input type="submit" style="margin-top:0;color:#666" class="btn btn-primary btn-sm"name="search_items" value="Tìm kiếm">
 						</div>
+					</form>
 					</div>
 				</div>
 			</div>

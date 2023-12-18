@@ -129,9 +129,9 @@
                 <div class="total_area">
                     <ul>
                         <li>Tổng <span>{{Cart::total().' '.'VNĐ'}}</span></li>
-                        <li>Thuế <span>{{Cart::tax().' '.'VNĐ'}}</span></li>
+                        <li>Thuế <span>{{number_format(0).' '.'VNĐ'}}</span></li>
                         <li>Phí vận chuyển <span>Miễn phí</span></li>
-                        <li>Thành tiền <span>{{Cart::total()}}</span></li>
+                        <li>Thành tiền <span>{{Cart::total().' '.'VNĐ'}}</span></li>
                     </ul>
                     <?php
 								$customer_id =Session::get('customer_id');
@@ -142,11 +142,10 @@
 								<?php
 								}else{
 								?>
-									<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i>Thanh toán</a></li>
+										<a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Thanh toán</a>
 								<?php
 								}
 								?>
-                        
                 </div>
             </div>
         </div>

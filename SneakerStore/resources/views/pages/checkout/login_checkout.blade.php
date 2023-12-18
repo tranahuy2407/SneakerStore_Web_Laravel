@@ -26,6 +26,7 @@
                 <div class="center-wrap">
                   <div class="section text-center">
                   <form class="" action="{{URL::to('/login-customer')}}" method="post">
+                    {{csrf_field()}}
                     <h4 class="mb-4 pb-3">Đăng nhập tài khoản</h4>
                     <div class="form-group">
                       <input type="text" name="email_account" class="form-style" placeholder="Tài khoản"  required value = "">

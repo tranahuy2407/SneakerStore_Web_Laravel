@@ -14,7 +14,7 @@
 											<img src="{{URL::to('uploads/products/'.$product->product_image)}}" alt="" />
 											<h2>{{number_format($product->product_price).' VNĐ'}}</h2>
 											<p>Easy Polo Black Edition</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+											<a href="{{URL::to('/chi-tiet-san-pham/'.$product->product_id)}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Xem chi tiết sản phẩm</a>
 										</div>
 								</div>
 								<div class="choose">

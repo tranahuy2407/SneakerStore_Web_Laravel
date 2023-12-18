@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 //frontend
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/trang-chu', [App\Http\Controllers\HomeController::class, 'index'])->name('trang-chu');
+Route::post('/tim-kiem','App\Http\Controllers\HomeController@search');
 //Danh muc san pham trang chu
 Route::get('/danh-muc-san-pham/{category_id}','App\Http\Controllers\categoryProduct@show_category_home');
 //Thuong hieu san pham trang chu
@@ -75,7 +76,10 @@ Route::post('/update-cart-quantity', 'App\Http\Controllers\CartController@update
 
 //check-out
 Route::get('/login-checkout', 'App\Http\Controllers\CheckoutController@login_checkout');
+Route::get('/logout-checkout', 'App\Http\Controllers\CheckoutController@logout_checkout');
 Route::post('/add-customer', 'App\Http\Controllers\CheckoutController@add_customer');
+Route::post('/order-place', 'App\Http\Controllers\CheckoutController@order_place');
 Route::get('/checkout', 'App\Http\Controllers\CheckoutController@checkout');
+Route::get('/payment', 'App\Http\Controllers\CheckoutController@payment');
 Route::post('/save-checkout-customer', 'App\Http\Controllers\CheckoutController@save_checkout_customer');
 Route::post('/login-customer', 'App\Http\Controllers\CheckoutController@login_customer');
