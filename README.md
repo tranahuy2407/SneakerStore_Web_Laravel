@@ -1,23 +1,23 @@
-Curso de Laravel 5.1 donde aprenderemos a crear una aplicación web dinámica :D
+Laravel 8.2 aplication web SneakerStore
 
-#Cinema
+#SneakerStore
 
-## Instalación
+## Installation
 
-- Después de descargar el proyecto entramos a este.
+- After downloading the project, navigate into it.
 
         $ cd nombreRepositorio
 
-- Ejecutamos el siguiente comando.
+- Run the following command.
 
         $ composer install
 
-- Modificamos el nombre del archivo **.env.example.** por **.env** y agregamos nuestras credenciales.
+- Modify the name of the file .env.example to .env and add your credentials.
 
-- Por ultimo solo debemos generar una key para nuestra app.
+- Finally, we just need to generate a key for our app.
 
          $ php artisan key:generate
 
-- Listo ya podemos ejecutar el proyecto Cinema.
+- Alright, now we can run the SneakerStore project.
 
         $ php artisan serve
