@@ -1,23 +1,20 @@
-Curso de Laravel 5.1 donde aprenderemos a crear una aplicación web dinámica :D
+Installation
+After downloading the project, navigate into it.
 
-#Cinema
 
-## Instalación
+Copy code
+  $ cd repositoryName
+Execute the following command.
 
-- Después de descargar el proyecto entramos a este.
+Copy code
+  $ composer install
+Modify the name of the file .env.example to .env and add your credentials.
 
-        $ cd nombreRepositorio
+Finally, generate a key for your app.
 
-- Ejecutamos el siguiente comando.
+Copy code
+   $ php artisan key:generate
+Now, you can run the project.
 
-        $ composer install
-
-- Modificamos el nombre del archivo **.env.example.** por **.env** y agregamos nuestras credenciales.
-
-- Por ultimo solo debemos generar una key para nuestra app.
-
-         $ php artisan key:generate
-
-- Listo ya podemos ejecutar el proyecto Cinema.
-
-        $ php artisan serve
+Copy code
+  $ php artisan serve
