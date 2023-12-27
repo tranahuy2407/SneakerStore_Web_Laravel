@@ -1,17 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 //frontend
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/trang-chu', [App\Http\Controllers\HomeController::class, 'index'])->name('trang-chu');
@@ -83,3 +72,8 @@ Route::get('/checkout', 'App\Http\Controllers\CheckoutController@checkout');
 Route::get('/payment', 'App\Http\Controllers\CheckoutController@payment');
 Route::post('/save-checkout-customer', 'App\Http\Controllers\CheckoutController@save_checkout_customer');
 Route::post('/login-customer', 'App\Http\Controllers\CheckoutController@login_customer');
+
+
+//Order
+Route::get('/manage-order', 'App\Http\Controllers\CheckoutController@manage_order');
+Route::get('/view-order/{orderID}', 'App\Http\Controllers\CheckoutController@view_order');
